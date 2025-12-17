@@ -1,0 +1,10 @@
+## Variables from Playbook
+- name: Print variable from vars
+  hosts: localhost
+  connection: local
+  vars:
+    x: 100
+  tasks:
+    - name: Print variable x
+      ansible.builtin.debug:
+        msg: x - {{ x }}
