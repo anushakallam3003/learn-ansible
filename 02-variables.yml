@@ -8,3 +8,20 @@
     - name: Print variable x
       ansible.builtin.debug:
         msg: x - {{ x }}
+
+
+- name: Print variable from vars_files
+  hosts: localhost
+  connection: local
+  vars_files:
+    - values.yml
+  tasks:
+    - name: Print variable url
+      ansible.builtin.debug:
+        msg: url - {{ url }}
+
+#- name: Print variable from roles
+#  hosts: localhost
+ # connection: local
+  #roles:
+   # - demo
