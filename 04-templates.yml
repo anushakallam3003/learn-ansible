@@ -9,7 +9,7 @@
         src: test.txt
         dest: /tmp/file-copied.txt
 
-    - name: Template
+    - name: Templates
       ansible.builtin.template:
         src: test.txt
         dest: /tmp/template-copied.txt
