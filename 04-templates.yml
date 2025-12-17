@@ -2,7 +2,13 @@
   hosts: localhost
   connection: local
   vars:
-    sname: Raju
+    topics:
+      - Linux
+      - Shell
+      - Ansible
+    student:
+      name: Raju
+      age: 10
   tasks:
     - name: Copy
       ansible.builtin.copy:
